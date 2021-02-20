@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://lojain:lojain123@cluster0.sixr4.mongodb.net/Cluster0?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
+}
