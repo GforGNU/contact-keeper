@@ -1,5 +1,6 @@
 import React, {Fragment, useContext} from 'react';
 import PostContext from '../../context/post/PostContext';
+import PostItem from './PostItem';
 
 
 const Posts = () => {
@@ -8,10 +9,11 @@ const { posts } = postContext;
 return (
   <Fragment>
       {posts.map(post => (
-      <h3>{post.name}</h3>
+ <PostItem key={post.id} post={post} />
       ))}
   </Fragment>
 )
 }
+
 
 export default Posts;

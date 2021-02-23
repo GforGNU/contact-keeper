@@ -1,4 +1,4 @@
-import {createConntect, createContext} from 'react';
+import {createConnect, createContext} from 'react';
 
 const PostContext = createContext();
 

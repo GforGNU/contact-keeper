@@ -6,20 +6,13 @@ const PostSchema = mongoose.Schema({
         ref: 'users'
     },
     
-    name: {
+    title: {
         type: String,
         required: true
     },
-    email: {
+    body: {
         type: String,
         required: true,
-    },
-    phone: {
-        type: String
-    },
-    type: {
-        type: String,
-        default: 'personal'
     },
 
     date: {

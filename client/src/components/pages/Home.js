@@ -1,17 +1,13 @@
 import React from 'react';
-import Posts from '../posts/Posts';
+import PostForm from '../posts/PostFrom';
+
 
 const Home = () => {
     return (
-        <div className='grid-2'>
-           <div>
-               {/*post form*/}
-           </div>
-           <div>
-               <Posts />
-           </div>
-           
-        </div>
+        <div className=''>
+            <h1> {/*user name*/}</h1>
+    <PostForm />
+    </div>
     )
 }
 

@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Home from './components/pages/Home';
-import About from './components/pages/About';
+import PostPage from './components/pages/PostPage';
 import PostState from './context/post/PostState';
 
 import './App.css';
@@ -16,7 +16,7 @@ const App = () => {
     <div className='container'>
       <Switch>
         <Route exact path='/' component={Home}/>
-        <Route exact path='/about' component={About}/>
+        <Route exact path='/PostPage' component={PostPage}/>
       </Switch>
     </div>
     </Fragment>

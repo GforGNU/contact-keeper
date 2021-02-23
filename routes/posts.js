@@ -25,7 +25,7 @@ router.get('/', auth, async (req,res)=>{
 // @access private 
 router.post('/', [auth,  
     [
-    check('name', 'Name is required')
+    check('title', 'title is required')
         .not()
         .isEmpty()
     ]
@@ -36,14 +36,12 @@ async (req,res)=>{
             return res.status(400).json({errors: errors.array()});
         }
 
-        const {name, email, phone, type} = req.body;
+        const {title, body} = req.body;
 
         try{
             const newPost = new Post({
-                name,
-                email,
-                phone,
-                type,
+                title,
+                body,
                 user: req.user.id
             });
             const post = await newPost.save();
@@ -58,14 +56,13 @@ async (req,res)=>{
 // @desc   update post
 // @access private 
 router.put('/:id', auth, async (req,res)=>{
-    const {name, email, phone, type} = req.body;
+    const {title, body} = req.body;
 
     //build a post object
     const postFields = {};
-    if(name) postFields.name = name;
-    if(email) postFields.email = email;
-    if(phone) postFields.phone = phone;
-    if(type) postFields.type = type;
+    if(title) postFields.title = title;
+    if(body) postFields.body = body;
+
 
     try {
         let post = await Post.findById(req.params.id);
